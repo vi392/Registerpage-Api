@@ -30,7 +30,7 @@ exports.helpproj = async(req,res) => {
      }
 }
 
-// define route handler.
+// define route handler. for get Api.
 exports.helpproj1 = async(req,res) => {
     try{
         // featch all item from database.
