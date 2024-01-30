@@ -1,6 +1,8 @@
 // create a server.
 const express = require("express");
-const color = require('colors');
+const colors = require('colors');
+const cors = require('cors');
+const morgan = require('morgan');
 const app=express();
 
 // load config from dotenv.
@@ -12,6 +14,8 @@ const PORT = process.env.PORT || 4000;
 
 // middleware to parse json request body
 app.use(express.json());
+app.use(cors());
+app.use(morgan('dev'));
 
 // import routes for TODO API
 
